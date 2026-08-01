@@ -24,7 +24,7 @@ int main(int argc,char *argv[])
         printf("Enter the details of Driver no. %d\n",i);
         printf("Enter the Name of the driver\n");
         fgets(a, sizeof(a), stdin);
-        a[strcspn(a, "\n")] = '\0';   // strip trailing newline fgets keeps
+        a[strcspn(a, "\n")] = '\0';   // strip trailing newline fgets keeps (string complementary spanning function)
 
         printf("Enter your License Number\n");
         scanf("%d", &c);

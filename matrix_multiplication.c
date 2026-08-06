@@ -25,7 +25,7 @@ int main(int argc,char *argv[])
             // int z,z2;
             printf("Enter the value of %d %d element of the matrix\n",i,j);
             scanf("%d",&matrix[i][j]);
-            printf("\n");
+            // printf("\n");
             
         }
         // printf("The value at %d %d element of the matrix is %d",i,j,matrix[i][j]);

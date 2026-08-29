@@ -27,6 +27,7 @@ void reversed_triangular_star_pattern()
         printf("\n");
     }
 }
+// Comment Added    
 int main(int argc,char *argv[])
 {
     int a;

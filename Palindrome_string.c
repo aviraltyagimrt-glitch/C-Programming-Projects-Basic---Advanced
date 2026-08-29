@@ -1,5 +1,17 @@
 #include <stdio.h>
 #include <string.h>
+void reverse_str(char *s)
+{
+    int i = 0, j = strlen(s) - 1;
+    while (i < j)
+    {
+        char temp = s[i];
+        s[i] = s[j];
+        s[j] = temp;
+        i++;
+        j--;
+    }
+}
 int main(int argc,char *argv[])
 {
     char str[100];
@@ -8,7 +20,7 @@ int main(int argc,char *argv[])
     str[strcspn(str, "\n")] = '\0';
     char g[100];
     strcpy(g, str);
-    strrev(g);
+    reverse_str(g);
     if(strcmp(str, g) == 0)
     {
         printf("The string is a palindrome.\n");
@@ -17,5 +29,6 @@ int main(int argc,char *argv[])
     {
         printf("The string is not a palindrome.\n");
     }
+    // Palindrome Done
     return 0;
 }

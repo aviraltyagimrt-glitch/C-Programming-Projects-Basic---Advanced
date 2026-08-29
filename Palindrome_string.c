@@ -29,6 +29,6 @@ int main(int argc,char *argv[])
     {
         printf("The string is not a palindrome.\n");
     }
-    // Palindrome Done
+    // Palindrome 
     return 0;
 }

@@ -78,6 +78,10 @@ int main(int argc, char *argv[])
             printf("Thank you for using the program\nDeveloped by Aviral Tyagi");
             return 0;
             break;
+        default:
+            printf("Kindly choose the option from the one mentioned below\n");
+            break;
         }
+            
     }
 }

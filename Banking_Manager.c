@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdbool.h>
 int accounts;
-int PIN;
+char PIN;
 int current_balance = 0;
 int total_balance = 0;
 
@@ -102,44 +102,49 @@ void Account_Creation()
     char name[50];
     int Date;
     char Month[10];
-    int Year;
-    int contact_number;
+    char Year;
+    char contact_number;
     char address[100];
     printf("Kindly Enter your Name\n");
     fgets(name,sizeof(name),stdin);
+    while(getchar() != '\n');
     printf("Enter Only your Date of Birth\n");
-    scanf("%d",&Date);
-    if(len(Date) < 0 || len(Date) > 2)
+    fgets(Date,sizeof(Date),stdin);
+    while(getchar() != '\n');
+    if(strlen(Date) < 0 || strlen(Date) > 2)
     {
         printf("Sorry the length of date of birth must be 2 digits Only\n");
     }
     printf("Now Enter the month in which you were born\n");
-    scanf("%s",&Month);
+    fgets(Month,sizeof(Month),stdin);
+    while(getchar() != '\n');
     if(strlen(Month) < 0 || strlen(Month) > 10)
     {
         printf("Sorry the Month name must contain upto 10 characters Only\n");
     }
     printf("Now Enter the year in which you were born\n");
-    scanf("%d",&Year);
-    if(len(Year)< 0 || len(Year) > 4)
+    fgets(Year,sizeof(Year),stdin);
+    if(strlen(Year)< 0 || strlen(Year) > 4)
     {
         printf("Sorry the length of the Year must be 4 digits only\n");
     }
     printf("Enter your 10 digit Mobile Number\n");
-    scanf("%d",&contact_number);
-    if(len(contact_number) < 0 || len(contact_number) > 10)
+    fgets(contact_number,sizeof(contact_number),stdin);
+    while(getchar() != '\n');
+    if(strlen(contact_number) < 0 || strlen(contact_number) > 10)
     {
         printf("Sorry the length of the contact number must be of 10 digits only\n");
     }
     printf("Kindly Enter your Address\n");
     fgets(address,sizeof(address),stdin);
     printf("Congratulations Your Information is created Successfully\n");
-    printf("Your Current Information is Name :- %s\nDOB :- %d - %s - %d\nContact Number :- %d\n Address :- %s\n",name,Date,Month,Year,contact_number,address);
+    printf("Your Current Information is Name :- %s\nDOB :- %s - %s - %s\nContact Number :- %s\n Address :- %s\n",name,Date,Month,Year,contact_number,address);
     printf("Now Kindly Create your Account Number\n");
     scanf("%d",&accounts);
     // Condition to check whether the account number is available or not
     printf("Now Create a 4 digit Login PIN\n");
-    scanf("%d",&PIN);
+    fgets(PIN,sizeof(PIN),stdin);
+    while(getchar() != '\n');
     if(strlen(PIN) < 0 || strlen(PIN) > 4)
     {
         printf("The PIN Cannot be created because the PIN must be of 4 Digita Only\n");
@@ -150,7 +155,7 @@ void Account_Creation()
         printf("Congratulations the PIN is created successfully\n");
     }
     printf("Your Account Number is %d\n",accounts);
-    printf("Your PIN generated is %d\n",PIN);
+    printf("Your PIN generated is %s\n",PIN);
 
 
 
